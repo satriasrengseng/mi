@@ -1,0 +1,14 @@
+/* AMBIL FASILITAS DAN HARGA */
+SELECT sp.price_id , sj.jenjang ,sf.fasilitas_nama, sp.price_real 
+FROM satria_fasilitas sf 
+JOIN satria_price sp 
+	on sf.fasilitas_id = sp.fasilitas_id 
+JOIN satria_jenjang sj 
+	on sp.jenjang_id = sj.jenjang_id 
+ORDER BY sj.jenjang_id
+
+
+  /* AMBIL JADWAL SMK*/
+SELECT satria_kelas_jurusan.kd_jenjang_smk, satria_kelas_jurusan.jurusan_kd, satria_kelas_jurusan.kelas_id, file, satria_smk_jadwal.tahun_ajar
+FROM `satria_smk_jadwal`
+JOIN satria_kelas_jurusan ON satria_smk_jadwal.id_kelas_jurusan = satria_kelas_jurusan.id_kelas_jurusan

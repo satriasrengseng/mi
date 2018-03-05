@@ -1,0 +1,2 @@
+/* AMBIL FASILITAS DAN HARGA */
+SELECT sp.price_id , sj.jenjang ,  sf.fasilitas_nama, sp.price_real FROM satria_fasilitas sf join satria_price sp on sf.fasilitas_id = sp.fasilitas_id join satria_jenjang sj on sp.jenjang_id = sj.jenjang_id order by sj.jenjang_id
